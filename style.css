@@ -1,0 +1,28 @@
+:root {
+  --ff-sans: "Press Start 2P", system-ui;
+  --fw-normal: 400;
+
+  --fs-400: 0.9375rem;
+  --fs-900: 2.5rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-normal);
+  font-size: var(--fs-400);
+  color: rgb(255, 32, 99);
+}
+
+body {
+  background-color: rgb(0, 28, 70);
+}
+
+h1 {
+  font-size: var(--fs-900);
+}
