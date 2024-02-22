@@ -4,6 +4,9 @@
 
   --fs-400: 0.9375rem;
   --fs-900: 2.5rem;
+
+  --color-primary: rgb(0, 28, 70);
+  --color-accent: rgb(255, 32, 99);
 }
 
 *,
@@ -16,13 +19,40 @@ html {
   font-family: var(--ff-sans);
   font-weight: var(--fw-normal);
   font-size: var(--fs-400);
-  color: rgb(255, 32, 99);
+  color: var(--color-accent);
 }
 
 body {
-  background-color: rgb(0, 28, 70);
+  background-color: var(--color-primary);
 }
 
 h1 {
   font-size: var(--fs-900);
+}
+
+.wrapper {
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-board {
+  --game-letter-size: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 8px;
+  height: 800px;
+  width: 800px;
+  background-color: var(--color-accent);
+}
+
+.game-board > div {
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--game-letter-size);
 }
