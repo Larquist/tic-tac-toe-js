@@ -39,14 +39,16 @@ h1 {
 }
 
 .game-board {
+  --board-size: 500px;
   --game-letter-size: 3rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 8px;
-  height: 800px;
-  width: 800px;
+  height: var(--board-size);
+  width: var(--board-size);
   background-color: var(--color-accent);
+  margin-block: 50px;
 }
 
 .game-board > div {
@@ -55,4 +57,13 @@ h1 {
   justify-content: center;
   align-items: center;
   font-size: var(--game-letter-size);
+}
+
+button {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  padding: 20px;
+  border-radius: 50px;
+  border: none;
+  font-family: var(--ff-sans);
 }
